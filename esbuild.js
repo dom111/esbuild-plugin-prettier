@@ -1,4 +1,4 @@
-const esbuild = require('esbuild'),
+const { build } = require('esbuild'),
     {Prettier} = require('./'),
     buildOptions = {
         entryPoints: [
@@ -34,8 +34,7 @@ process.argv.forEach((arg) => {
 
 process.stdout.write(`Building... `);
 
-esbuild
-    .build(buildOptions)
+build(buildOptions)
     .then(() => {
         console.log('\x1b[32mdone.\x1b[0m');
     })
