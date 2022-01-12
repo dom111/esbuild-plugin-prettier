@@ -1,0 +1,30 @@
+{
+  "name": "esbuild-plugin-prettier",
+  "version": "1.0.0",
+  "description": "A plugin to run prettier on your files as esbuild processes them.",
+  "main": "dist/Prettier.js",
+  "scripts": {
+    "build": "npm run build:esbuild",
+    "build:watch": "npm run build:esbuild:watch",
+    "build:esbuild": "node esbuild.js prod",
+    "build:esbuild:watch": "node esbuild.js dev watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dom111/esbuild-plugin-prettier.git"
+  },
+  "author": "Dom Hastings",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dom111/esbuild-plugin-prettier/issues"
+  },
+  "homepage": "https://github.com/dom111/esbuild-plugin-prettier#readme",
+  "dependencies": {
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@types/prettier": "^2.4.2",
+    "esbuild": "^0.14.11"
+  }
+}
